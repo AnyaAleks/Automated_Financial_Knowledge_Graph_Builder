@@ -1,0 +1,21 @@
+project:
+  name: "Financial KG Light"
+  version: "1.0.0"
+
+neo4j:
+  uri: "bolt://localhost:7687"
+  username: "neo4j"
+  password: "neo4j"
+  database: "neo4j"
+
+extraction:
+  entity_types: ["ORG", "PERSON", "PRODUCT", "DATE", "MONEY"]
+  relation_types: ["ACQUIRED", "INVESTED_IN", "LAUNCHED", "CEO_OF"]
+
+model:
+  type: "spacy"
+  spacy_model: "en_core_web_sm"
+  
+pipeline:
+  batch_size: 5
+  confidence_threshold: 0.5

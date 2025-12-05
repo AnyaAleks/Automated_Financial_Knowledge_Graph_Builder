@@ -1,0 +1,269 @@
+2025-12-05 10:19:57.727+0000 INFO  Running in daemon mode, all <Console> appenders will be suppressed:
+2025-12-05 10:19:57.732+0000 INFO  Removing console appender 'ConsoleAppender' with target 'SYSTEM_OUT'.
+2025-12-05 10:19:57.733+0000 INFO  Logging config in use: File '/home/anya/Documents/BIT/Big Data Analyses/experiments_reports/Knowledge Graph/kg_finance_project/neo4j_standalone/neo4j/conf/user-logs.xml'
+2025-12-05 10:19:57.736+0000 WARN  Use of deprecated setting 'dbms.connector.http.enabled'. It is replaced by 'server.http.enabled'.
+2025-12-05 10:19:57.736+0000 WARN  Use of deprecated setting 'dbms.connector.bolt.enabled'. It is replaced by 'server.bolt.enabled'.
+2025-12-05 10:19:57.736+0000 WARN  Use of deprecated setting 'dbms.connector.http.listen_address'. It is replaced by 'server.http.listen_address'.
+2025-12-05 10:19:57.736+0000 WARN  Use of deprecated setting 'dbms.connector.bolt.listen_address'. It is replaced by 'server.bolt.listen_address'.
+2025-12-05 10:19:57.742+0000 INFO  Starting...
+2025-12-05 10:19:59.328+0000 INFO  This instance is ServerId{e25f16de} (e25f16de-ca6f-4966-92a2-6abe43907853)
+2025-12-05 10:20:00.415+0000 INFO  ======== Neo4j 5.14.0 ========
+2025-12-05 10:20:02.272+0000 INFO  Bolt enabled on localhost:7687.
+2025-12-05 10:20:02.785+0000 INFO  HTTP enabled on localhost:7474.
+2025-12-05 10:20:02.785+0000 INFO  Remote interface available at http://localhost:7474/
+2025-12-05 10:20:02.787+0000 INFO  id: A997BD8FA142B5EA2F13B6A55FA0CA18020BE7145C1D42A2FF53A6BCD958E992
+2025-12-05 10:20:02.787+0000 INFO  name: system
+2025-12-05 10:20:02.787+0000 INFO  creationDate: 2025-12-05T10:20:01.15Z
+2025-12-05 10:20:02.788+0000 INFO  Started.
+2025-12-05 11:34:13.012+0000 WARN  org.neo4j.bolt.protocol.common.fsm.error.TransactionStateTransitionException: There is no procedure with the name `dbms.showCurrentUser` registered for this database instance. Please ensure you've spelled the procedure name correctly and that the procedure is properly deployed.
+2025-12-05 11:34:13.017+0000 WARN  at org.neo4j.bolt.protocol.common.fsm.transition.transaction.CreateStatementStateTransition.process(CreateStatementStateTransition.java:56)
+2025-12-05 11:34:13.017+0000 WARN  at org.neo4j.bolt.protocol.common.fsm.transition.transaction.CreateStatementStateTransition.process(CreateStatementStateTransition.java:32)
+2025-12-05 11:34:13.018+0000 WARN  at org.neo4j.bolt.protocol.common.fsm.transition.transaction.TransactionalStateTransition.process(TransactionalStateTransition.java:42)
+2025-12-05 11:34:13.018+0000 WARN  at org.neo4j.bolt.fsm.state.MultiTransitionState.process(MultiTransitionState.java:53)
+2025-12-05 11:34:13.018+0000 WARN  at org.neo4j.bolt.fsm.StateMachineImpl.process(StateMachineImpl.java:151)
+2025-12-05 11:34:13.018+0000 WARN  at org.neo4j.bolt.protocol.common.connector.connection.AtomicSchedulingConnection.lambda$submit$4(AtomicSchedulingConnection.java:122)
+2025-12-05 11:34:13.019+0000 WARN  at org.neo4j.bolt.protocol.common.connector.connection.AtomicSchedulingConnection.executeJob(AtomicSchedulingConnection.java:336)
+2025-12-05 11:34:13.019+0000 WARN  at org.neo4j.bolt.protocol.common.connector.connection.AtomicSchedulingConnection.doExecuteJobs(AtomicSchedulingConnection.java:315)
+2025-12-05 11:34:13.019+0000 WARN  at org.neo4j.bolt.protocol.common.connector.connection.AtomicSchedulingConnection.executeJobs(AtomicSchedulingConnection.java:221)
+2025-12-05 11:34:13.019+0000 WARN  at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+2025-12-05 11:34:13.019+0000 WARN  at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+2025-12-05 11:34:13.019+0000 WARN  at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+2025-12-05 11:34:13.020+0000 WARN  at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+2025-12-05 11:34:13.020+0000 WARN  at java.base/java.lang.Thread.run(Thread.java:840)
+2025-12-05 11:34:13.020+0000 WARN  Caused by: org.neo4j.bolt.tx.error.statement.StatementExecutionException: There is no procedure with the name `dbms.showCurrentUser` registered for this database instance. Please ensure you've spelled the procedure name correctly and that the procedure is properly deployed.
+2025-12-05 11:34:13.020+0000 WARN  at org.neo4j.bolt.tx.TransactionImpl.run(TransactionImpl.java:122)
+2025-12-05 11:34:13.020+0000 WARN  at org.neo4j.bolt.protocol.common.fsm.transition.transaction.CreateStatementStateTransition.process(CreateStatementStateTransition.java:48)
+2025-12-05 11:34:13.021+0000 WARN  ... 13 more
+2025-12-05 11:34:13.021+0000 WARN  Caused by: org.neo4j.fabric.executor.FabricException: There is no procedure with the name `dbms.showCurrentUser` registered for this database instance. Please ensure you've spelled the procedure name correctly and that the procedure is properly deployed.
+2025-12-05 11:34:13.021+0000 WARN  at org.neo4j.fabric.executor.Exceptions.transform(Exceptions.java:53)
+2025-12-05 11:34:13.021+0000 WARN  at org.neo4j.fabric.executor.FabricKernelTransaction.lambda$execute$0(FabricKernelTransaction.java:108)
+2025-12-05 11:34:13.021+0000 WARN  at org.neo4j.fabric.stream.StatementResults.connectVia(StatementResults.java:51)
+2025-12-05 11:34:13.021+0000 WARN  at org.neo4j.fabric.executor.FabricKernelTransaction.run(FabricKernelTransaction.java:90)
+2025-12-05 11:34:13.021+0000 WARN  at org.neo4j.fabric.executor.FabricLocalExecutor$LocalTransactionContext.run(FabricLocalExecutor.java:98)
+2025-12-05 11:34:13.021+0000 WARN  at org.neo4j.fabric.executor.FabricExecutor$FabricStatementExecution.runLocalQueryAt(FabricExecutor.java:429)
+2025-12-05 11:34:13.022+0000 WARN  at org.neo4j.fabric.executor.FabricExecutor$FabricStatementExecution.runExec(FabricExecutor.java:356)
+2025-12-05 11:34:13.022+0000 WARN  at org.neo4j.fabric.executor.FabricExecutor$FabricStatementExecution.run(FabricExecutor.java:288)
+2025-12-05 11:34:13.022+0000 WARN  at org.neo4j.fabric.executor.FabricExecutor$FabricStatementExecution.run(FabricExecutor.java:254)
+2025-12-05 11:34:13.022+0000 WARN  at org.neo4j.fabric.executor.FabricExecutor.lambda$run$0(FabricExecutor.java:184)
+2025-12-05 11:34:13.022+0000 WARN  at org.neo4j.fabric.transaction.FabricTransactionImpl.execute(FabricTransactionImpl.java:207)
+2025-12-05 11:34:13.022+0000 WARN  at org.neo4j.fabric.executor.FabricExecutor.run(FabricExecutor.java:151)
+2025-12-05 11:34:13.022+0000 WARN  at org.neo4j.fabric.bolt.BoltFabricDatabaseService$BoltTransactionImpl.executeQuery(BoltFabricDatabaseService.java:172)
+2025-12-05 11:34:13.022+0000 WARN  at org.neo4j.bolt.tx.TransactionImpl.run(TransactionImpl.java:116)
+2025-12-05 11:34:13.022+0000 WARN  ... 14 more
+2025-12-05 11:34:13.023+0000 WARN  Caused by: org.neo4j.exceptions.CypherExecutionException: There is no procedure with the name `dbms.showCurrentUser` registered for this database instance. Please ensure you've spelled the procedure name correctly and that the procedure is properly deployed.
+2025-12-05 11:34:13.023+0000 WARN  at org.neo4j.cypher.internal.spi.ExceptionTranslatingPlanContext.procedureSignature(ExceptionTranslatingPlanContext.scala:120)
+2025-12-05 11:34:13.023+0000 WARN  at org.neo4j.cypher.internal.compiler.phases.InstrumentedProcedureSignatureResolver.procedureSignature(RewriteProcedureCalls.scala:178)
+2025-12-05 11:34:13.023+0000 WARN  at org.neo4j.cypher.internal.compiler.phases.RewriteProcedureCalls.$anonfun$resolveProcedure$1(RewriteProcedureCalls.scala:76)
+2025-12-05 11:34:13.023+0000 WARN  at org.neo4j.cypher.internal.logical.plans.ResolvedCall$.apply(ResolvedCall.scala:54)
+2025-12-05 11:34:13.023+0000 WARN  at org.neo4j.cypher.internal.compiler.phases.RewriteProcedureCalls.resolveProcedure(RewriteProcedureCalls.scala:76)
+2025-12-05 11:34:13.023+0000 WARN  at org.neo4j.cypher.internal.compiler.phases.RewriteProcedureCalls.resolveProcedure$(RewriteProcedureCalls.scala:75)
+2025-12-05 11:34:13.024+0000 WARN  at org.neo4j.cypher.internal.compiler.phases.RewriteProcedureCalls$.resolveProcedure(RewriteProcedureCalls.scala:136)
+2025-12-05 11:34:13.024+0000 WARN  at org.neo4j.cypher.internal.compiler.phases.RewriteProcedureCalls$$anonfun$resolverProcedureCall$1.applyOrElse(RewriteProcedureCalls.scala:69)
+2025-12-05 11:34:13.024+0000 WARN  at scala.PartialFunction$OrElse.apply(PartialFunction.scala:266)
+2025-12-05 11:34:13.024+0000 WARN  at org.neo4j.cypher.internal.util.Rewritable$RewritableAny$.rewrite$extension(Rewritable.scala:118)
+2025-12-05 11:34:13.024+0000 WARN  at org.neo4j.cypher.internal.util.bottomUp$BottomUpRewriter.rec(Rewritable.scala:361)
+2025-12-05 11:34:13.024+0000 WARN  at org.neo4j.cypher.internal.util.bottomUp$BottomUpRewriter.apply(Rewritable.scala:344)
+2025-12-05 11:34:13.024+0000 WARN  at scala.Function1.$anonfun$andThen$1(Function1.scala:87)
+2025-12-05 11:34:13.024+0000 WARN  at org.neo4j.cypher.internal.util.Rewritable$RewritableAny$.rewrite$extension(Rewritable.scala:118)
+2025-12-05 11:34:13.024+0000 WARN  at org.neo4j.cypher.internal.util.Rewritable$RewritableAny$.endoRewrite$extension(Rewritable.scala:127)
+2025-12-05 11:34:13.025+0000 WARN  at org.neo4j.cypher.internal.compiler.phases.RewriteProcedureCalls.process(RewriteProcedureCalls.scala:53)
+2025-12-05 11:34:13.025+0000 WARN  at org.neo4j.cypher.internal.compiler.phases.RewriteProcedureCalls.process$(RewriteProcedureCalls.scala:51)
+2025-12-05 11:34:13.025+0000 WARN  at org.neo4j.cypher.internal.compiler.phases.RewriteProcedureCalls$.process(RewriteProcedureCalls.scala:136)
+2025-12-05 11:34:13.025+0000 WARN  at org.neo4j.cypher.internal.compiler.phases.RewriteProcedureCalls$.process(RewriteProcedureCalls.scala:140)
+2025-12-05 11:34:13.025+0000 WARN  at org.neo4j.cypher.internal.compiler.phases.RewriteProcedureCalls$.process(RewriteProcedureCalls.scala:136)
+2025-12-05 11:34:13.025+0000 WARN  at org.neo4j.cypher.internal.frontend.phases.Phase.$anonfun$transform$1(Phase.scala:36)
+2025-12-05 11:34:13.025+0000 WARN  at org.neo4j.cypher.internal.frontend.helpers.package$.$anonfun$closing$1(package.scala:25)
+2025-12-05 11:34:13.025+0000 WARN  at org.neo4j.cypher.internal.frontend.helpers.package$.using(package.scala:34)
+2025-12-05 11:34:13.025+0000 WARN  at org.neo4j.cypher.internal.frontend.helpers.package$.closing(package.scala:25)
+2025-12-05 11:34:13.025+0000 WARN  at org.neo4j.cypher.internal.frontend.phases.Phase.transform(Phase.scala:35)
+2025-12-05 11:34:13.026+0000 WARN  at org.neo4j.cypher.internal.frontend.phases.Phase.transform$(Phase.scala:33)
+2025-12-05 11:34:13.026+0000 WARN  at org.neo4j.cypher.internal.compiler.phases.RewriteProcedureCalls$.transform(RewriteProcedureCalls.scala:136)
+2025-12-05 11:34:13.026+0000 WARN  at org.neo4j.cypher.internal.frontend.phases.PipeLine.transform(Transformer.scala:74)
+2025-12-05 11:34:13.026+0000 WARN  at org.neo4j.cypher.internal.frontend.phases.PipeLine.transform(Transformer.scala:74)
+2025-12-05 11:34:13.026+0000 WARN  at org.neo4j.cypher.internal.frontend.phases.PipeLine.transform(Transformer.scala:74)
+2025-12-05 11:34:13.027+0000 WARN  at org.neo4j.cypher.internal.frontend.phases.PipeLine.transform(Transformer.scala:74)
+2025-12-05 11:34:13.027+0000 WARN  at org.neo4j.cypher.internal.compiler.CypherPlanner.normalizeQuery(CypherPlanner.scala:64)
+2025-12-05 11:34:13.027+0000 WARN  at org.neo4j.cypher.internal.planning.CypherPlanner.doPlan(CypherPlanner.scala:378)
+2025-12-05 11:34:13.027+0000 WARN  at org.neo4j.cypher.internal.planning.CypherPlanner.plan(CypherPlanner.scala:313)
+2025-12-05 11:34:13.027+0000 WARN  at org.neo4j.cypher.internal.CypherCurrentCompiler.compile(CypherCurrentCompiler.scala:137)
+2025-12-05 11:34:13.028+0000 WARN  at org.neo4j.cypher.internal.LibraryMasterCompiler.compile(MasterCompiler.scala:118)
+2025-12-05 11:34:13.028+0000 WARN  at org.neo4j.cypher.internal.ExecutionEngine.$anonfun$compilerWithExpressionCodeGenOption$2(ExecutionEngine.scala:276)
+2025-12-05 11:34:13.028+0000 WARN  at org.neo4j.cypher.internal.ExecutionEngine$$anon$1.compile(ExecutionEngine.scala:285)
+2025-12-05 11:34:13.028+0000 WARN  at org.neo4j.cypher.internal.ExecutionEngine$$anon$1.compile(ExecutionEngine.scala:279)
+2025-12-05 11:34:13.028+0000 WARN  at org.neo4j.cypher.internal.QueryCache.$anonfun$compileAndCache$1(QueryCache.scala:298)
+2025-12-05 11:34:13.029+0000 WARN  at org.neo4j.cypher.internal.QueryCache.compileOrCompileWithExpressionCodeGenAndCache(QueryCache.scala:339)
+2025-12-05 11:34:13.029+0000 WARN  at org.neo4j.cypher.internal.QueryCache.compileAndCache(QueryCache.scala:300)
+2025-12-05 11:34:13.029+0000 WARN  at org.neo4j.cypher.internal.QueryCache.computeIfAbsentOrStale(QueryCache.scala:205)
+2025-12-05 11:34:13.029+0000 WARN  at org.neo4j.cypher.internal.ExecutionEngine.getOrCompile(ExecutionEngine.scala:340)
+2025-12-05 11:34:13.029+0000 WARN  at org.neo4j.cypher.internal.ExecutionEngine.doExecute(ExecutionEngine.scala:218)
+2025-12-05 11:34:13.029+0000 WARN  at org.neo4j.cypher.internal.ExecutionEngine.$anonfun$execute$1(ExecutionEngine.scala:139)
+2025-12-05 11:34:13.030+0000 WARN  at org.neo4j.cypher.internal.ExecutionEngine.closing(ExecutionEngine.scala:189)
+2025-12-05 11:34:13.030+0000 WARN  at org.neo4j.cypher.internal.ExecutionEngine.execute(ExecutionEngine.scala:129)
+2025-12-05 11:34:13.030+0000 WARN  at org.neo4j.cypher.internal.javacompat.ExecutionEngine.executeQuery(ExecutionEngine.java:162)
+2025-12-05 11:34:13.030+0000 WARN  at org.neo4j.fabric.executor.FabricKernelTransaction.lambda$execute$0(FabricKernelTransaction.java:102)
+2025-12-05 11:34:13.030+0000 WARN  ... 26 more
+2025-12-05 11:34:13.031+0000 WARN  Caused by: org.neo4j.internal.kernel.api.exceptions.ProcedureException: There is no procedure with the name `dbms.showCurrentUser` registered for this database instance. Please ensure you've spelled the procedure name correctly and that the procedure is properly deployed.
+2025-12-05 11:34:13.031+0000 WARN  at org.neo4j.procedure.impl.ProcedureRegistry.noSuchProcedure(ProcedureRegistry.java:237)
+2025-12-05 11:34:13.031+0000 WARN  at org.neo4j.procedure.impl.ProcedureRegistry.procedure(ProcedureRegistry.java:170)
+2025-12-05 11:34:13.031+0000 WARN  at org.neo4j.procedure.impl.ProcedureViewImpl.procedure(ProcedureViewImpl.java:104)
+2025-12-05 11:34:13.032+0000 WARN  at org.neo4j.kernel.impl.newapi.AllStoreHolder.procedureGet(AllStoreHolder.java:986)
+2025-12-05 11:34:13.032+0000 WARN  at org.neo4j.cypher.internal.spi.TransactionBoundPlanContext$.procedureSignature(TransactionBoundPlanContext.scala:83)
+2025-12-05 11:34:13.032+0000 WARN  at org.neo4j.cypher.internal.spi.TransactionBoundPlanContext.procedureSignature(TransactionBoundPlanContext.scala:492)
+2025-12-05 11:34:13.032+0000 WARN  ... 76 more
+2025-12-05 11:40:27.893+0000 WARN  org.neo4j.bolt.protocol.common.fsm.error.TransactionStateTransitionException: Invalid input '-': expected
+  "ALTER"
+  "CALL"
+  "CREATE"
+  "DEALLOCATE"
+  "DELETE"
+  "DENY"
+  "DETACH"
+  "DROP"
+  "DRYRUN"
+  "ENABLE"
+  "FOREACH"
+  "GRANT"
+  "LOAD"
+  "MATCH"
+  "MERGE"
+  "NODETACH"
+  "OPTIONAL"
+  "REALLOCATE"
+  "REMOVE"
+  "RENAME"
+  "RETURN"
+  "REVOKE"
+  "SET"
+  "SHOW"
+  "START"
+  "STOP"
+  "TERMINATE"
+  "UNWIND"
+  "USE"
+  "USING"
+  "WITH" (line 1, column 1 (offset: 0))
+"-- Show full graph (limited)"
+ ^
+2025-12-05 11:40:27.894+0000 WARN  at org.neo4j.bolt.protocol.common.fsm.transition.transaction.CreateStatementStateTransition.process(CreateStatementStateTransition.java:56)
+2025-12-05 11:40:27.894+0000 WARN  at org.neo4j.bolt.protocol.common.fsm.transition.transaction.CreateStatementStateTransition.process(CreateStatementStateTransition.java:32)
+2025-12-05 11:40:27.894+0000 WARN  at org.neo4j.bolt.protocol.common.fsm.transition.transaction.TransactionalStateTransition.process(TransactionalStateTransition.java:42)
+2025-12-05 11:40:27.894+0000 WARN  at org.neo4j.bolt.fsm.state.MultiTransitionState.process(MultiTransitionState.java:53)
+2025-12-05 11:40:27.894+0000 WARN  at org.neo4j.bolt.fsm.StateMachineImpl.process(StateMachineImpl.java:151)
+2025-12-05 11:40:27.894+0000 WARN  at org.neo4j.bolt.protocol.common.connector.connection.AtomicSchedulingConnection.lambda$submit$4(AtomicSchedulingConnection.java:122)
+2025-12-05 11:40:27.894+0000 WARN  at org.neo4j.bolt.protocol.common.connector.connection.AtomicSchedulingConnection.executeJob(AtomicSchedulingConnection.java:336)
+2025-12-05 11:40:27.895+0000 WARN  at org.neo4j.bolt.protocol.common.connector.connection.AtomicSchedulingConnection.doExecuteJobs(AtomicSchedulingConnection.java:315)
+2025-12-05 11:40:27.895+0000 WARN  at org.neo4j.bolt.protocol.common.connector.connection.AtomicSchedulingConnection.executeJobs(AtomicSchedulingConnection.java:221)
+2025-12-05 11:40:27.895+0000 WARN  at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+2025-12-05 11:40:27.895+0000 WARN  at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+2025-12-05 11:40:27.895+0000 WARN  at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+2025-12-05 11:40:27.895+0000 WARN  at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+2025-12-05 11:40:27.895+0000 WARN  at java.base/java.lang.Thread.run(Thread.java:840)
+2025-12-05 11:40:27.896+0000 WARN  Caused by: org.neo4j.bolt.tx.error.statement.StatementExecutionException: Invalid input '-': expected
+  "ALTER"
+  "CALL"
+  "CREATE"
+  "DEALLOCATE"
+  "DELETE"
+  "DENY"
+  "DETACH"
+  "DROP"
+  "DRYRUN"
+  "ENABLE"
+  "FOREACH"
+  "GRANT"
+  "LOAD"
+  "MATCH"
+  "MERGE"
+  "NODETACH"
+  "OPTIONAL"
+  "REALLOCATE"
+  "REMOVE"
+  "RENAME"
+  "RETURN"
+  "REVOKE"
+  "SET"
+  "SHOW"
+  "START"
+  "STOP"
+  "TERMINATE"
+  "UNWIND"
+  "USE"
+  "USING"
+  "WITH" (line 1, column 1 (offset: 0))
+"-- Show full graph (limited)"
+ ^
+2025-12-05 11:40:27.896+0000 WARN  at org.neo4j.bolt.tx.TransactionImpl.run(TransactionImpl.java:122)
+2025-12-05 11:40:27.896+0000 WARN  at org.neo4j.bolt.protocol.common.fsm.transition.transaction.CreateStatementStateTransition.process(CreateStatementStateTransition.java:48)
+2025-12-05 11:40:27.896+0000 WARN  ... 13 more
+2025-12-05 11:40:27.896+0000 WARN  Caused by: org.neo4j.exceptions.SyntaxException: Invalid input '-': expected
+  "ALTER"
+  "CALL"
+  "CREATE"
+  "DEALLOCATE"
+  "DELETE"
+  "DENY"
+  "DETACH"
+  "DROP"
+  "DRYRUN"
+  "ENABLE"
+  "FOREACH"
+  "GRANT"
+  "LOAD"
+  "MATCH"
+  "MERGE"
+  "NODETACH"
+  "OPTIONAL"
+  "REALLOCATE"
+  "REMOVE"
+  "RENAME"
+  "RETURN"
+  "REVOKE"
+  "SET"
+  "SHOW"
+  "START"
+  "STOP"
+  "TERMINATE"
+  "UNWIND"
+  "USE"
+  "USING"
+  "WITH" (line 1, column 1 (offset: 0))
+"-- Show full graph (limited)"
+ ^
+2025-12-05 11:40:27.896+0000 WARN  at org.neo4j.cypher.internal.compiler.Neo4jCypherExceptionFactory.syntaxException(SyntaxExceptionCreator.scala:37)
+2025-12-05 11:40:27.896+0000 WARN  at org.neo4j.cypher.internal.compiler.Neo4jCypherExceptionFactory.syntaxException(SyntaxExceptionCreator.scala:29)
+2025-12-05 11:40:27.897+0000 WARN  at org.neo4j.cypher.internal.ast.factory.neo4j.Neo4jASTExceptionFactory.syntaxException(Neo4jASTExceptionFactory.scala:52)
+2025-12-05 11:40:27.897+0000 WARN  at org.neo4j.cypher.internal.parser.javacc.Cypher.Statements(Cypher.java:268)
+2025-12-05 11:40:27.897+0000 WARN  at org.neo4j.cypher.internal.ast.factory.neo4j.JavaCCParser$.parse(JavaCCParser.scala:40)
+2025-12-05 11:40:27.897+0000 WARN  at org.neo4j.cypher.internal.compiler.phases.Parse$.process(Parse.scala:45)
+2025-12-05 11:40:27.897+0000 WARN  at org.neo4j.cypher.internal.compiler.phases.Parse$.process(Parse.scala:39)
+2025-12-05 11:40:27.897+0000 WARN  at org.neo4j.cypher.internal.frontend.phases.Phase.$anonfun$transform$1(Phase.scala:36)
+2025-12-05 11:40:27.898+0000 WARN  at org.neo4j.cypher.internal.frontend.helpers.package$.$anonfun$closing$1(package.scala:25)
+2025-12-05 11:40:27.898+0000 WARN  at org.neo4j.cypher.internal.frontend.helpers.package$.using(package.scala:34)
+2025-12-05 11:40:27.898+0000 WARN  at org.neo4j.cypher.internal.frontend.helpers.package$.closing(package.scala:25)
+2025-12-05 11:40:27.898+0000 WARN  at org.neo4j.cypher.internal.frontend.phases.Phase.transform(Phase.scala:35)
+2025-12-05 11:40:27.898+0000 WARN  at org.neo4j.cypher.internal.frontend.phases.Phase.transform$(Phase.scala:33)
+2025-12-05 11:40:27.898+0000 WARN  at org.neo4j.cypher.internal.compiler.phases.Parse$.transform(Parse.scala:39)
+2025-12-05 11:40:27.898+0000 WARN  at org.neo4j.cypher.internal.frontend.phases.PipeLine.transform(Transformer.scala:74)
+2025-12-05 11:40:27.898+0000 WARN  at org.neo4j.cypher.internal.frontend.phases.PipeLine.transform(Transformer.scala:74)
+2025-12-05 11:40:27.899+0000 WARN  at org.neo4j.cypher.internal.frontend.phases.PipeLine.transform(Transformer.scala:74)
+2025-12-05 11:40:27.899+0000 WARN  at org.neo4j.cypher.internal.frontend.phases.PipeLine.transform(Transformer.scala:74)
+2025-12-05 11:40:27.899+0000 WARN  at org.neo4j.cypher.internal.frontend.phases.PipeLine.transform(Transformer.scala:74)
+2025-12-05 11:40:27.899+0000 WARN  at org.neo4j.cypher.internal.frontend.phases.PipeLine.transform(Transformer.scala:74)
+2025-12-05 11:40:27.899+0000 WARN  at org.neo4j.cypher.internal.frontend.phases.PipeLine.transform(Transformer.scala:74)
+2025-12-05 11:40:27.899+0000 WARN  at org.neo4j.cypher.internal.frontend.phases.PipeLine.transform(Transformer.scala:74)
+2025-12-05 11:40:27.899+0000 WARN  at org.neo4j.cypher.internal.frontend.phases.PipeLine.transform(Transformer.scala:74)
+2025-12-05 11:40:27.900+0000 WARN  at org.neo4j.cypher.internal.frontend.phases.PipeLine.transform(Transformer.scala:74)
+2025-12-05 11:40:27.900+0000 WARN  at org.neo4j.cypher.internal.frontend.phases.PipeLine.transform(Transformer.scala:74)
+2025-12-05 11:40:27.900+0000 WARN  at org.neo4j.cypher.internal.frontend.phases.PipeLine.transform(Transformer.scala:74)
+2025-12-05 11:40:27.900+0000 WARN  at org.neo4j.fabric.pipeline.FabricFrontEnd$Pipeline$parseAndPrepare$.process(FabricFrontEnd.scala:149)
+2025-12-05 11:40:27.900+0000 WARN  at org.neo4j.fabric.planning.FabricPlanner$PlannerInstance.$anonfun$computePlan$1(FabricPlanner.scala:127)
+2025-12-05 11:40:27.900+0000 WARN  at org.neo4j.fabric.planning.FabricPlanner$PlannerInstance.trace(FabricPlanner.scala:167)
+2025-12-05 11:40:27.900+0000 WARN  at org.neo4j.fabric.planning.FabricPlanner$PlannerInstance.computePlan(FabricPlanner.scala:126)
+2025-12-05 11:40:27.900+0000 WARN  at org.neo4j.fabric.planning.FabricPlanner$PlannerInstance.$anonfun$plan$1(FabricPlanner.scala:117)
+2025-12-05 11:40:27.900+0000 WARN  at org.neo4j.fabric.cache.FabricQueryCache.computeIfAbsent(FabricQueryCache.scala:60)
+2025-12-05 11:40:27.901+0000 WARN  at org.neo4j.fabric.planning.FabricPlanner$PlannerInstance.plan$lzycompute(FabricPlanner.scala:119)
+2025-12-05 11:40:27.901+0000 WARN  at org.neo4j.fabric.planning.FabricPlanner$PlannerInstance.plan(FabricPlanner.scala:112)
+2025-12-05 11:40:27.901+0000 WARN  at org.neo4j.fabric.executor.FabricExecutor.run(FabricExecutor.java:140)
+2025-12-05 11:40:27.901+0000 WARN  at org.neo4j.fabric.bolt.BoltFabricDatabaseService$BoltTransactionImpl.executeQuery(BoltFabricDatabaseService.java:172)
+2025-12-05 11:40:27.901+0000 WARN  at org.neo4j.bolt.tx.TransactionImpl.run(TransactionImpl.java:116)
+2025-12-05 11:40:27.901+0000 WARN  ... 14 more

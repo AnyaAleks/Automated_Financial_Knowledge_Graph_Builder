@@ -1,0 +1,59 @@
+project:
+name: "Financial Knowledge Graph"
+version: "1.0.0"
+description: "Automated KG construction from financial news"
+
+neo4j:
+uri: ${NEO4J_URI}
+username: ${NEO4J_USERNAME}
+password: ${NEO4J_PASSWORD}
+database: "neo4j"
+encrypted: false
+
+llm:
+# Options: "local" or "api"
+mode: "local"
+
+# Local model (if mode is "local")
+local_model: "Qwen/Qwen2.5-7B-Instruct"
+device: "cuda"  # or "cpu"
+
+# API settings (if mode is "api")
+api_provider: "openai"
+api_model: "gpt-3.5-turbo"
+temperature: 0.1
+max_tokens: 500
+
+extraction:
+entity_types:
+- "COMPANY"
+- "PERSON"
+- "PRODUCT"
+- "EVENT"
+- "DATE"
+- "LOCATION"
+- "CURRENCY"
+- "STOCK_TICKER"
+
+relation_types:
+- "ACQUIRED"
+- "INVESTED_IN"
+- "LAUNCHED"
+- "PARTNERED_WITH"
+- "CEO_OF"
+- "FOUNDED"
+- "MERGER_WITH"
+- "STOCK_PRICE"
+- "REVENUE"
+- "EMPLOYS"
+
+pipeline:
+batch_size: 10
+max_sentences: 100
+confidence_threshold: 0.7
+enable_validation: true
+
+logging:
+level: "INFO"
+file: "logs/kg_pipeline.log"
+format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
